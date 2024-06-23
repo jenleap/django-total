@@ -4,4 +4,6 @@ total_be/foods/__pycache__
 total_be/foods/migrations/__pycache__
 total_be/core/__pycache__
 total_be/core/migrations/__pycache__
+total_be/recipes/__pycache__
+total_be/recipes/migrations/__pycache__
 total_be/staticfiles

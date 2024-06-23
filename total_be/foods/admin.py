@@ -24,6 +24,7 @@ class MeasureInline(admin.StackedInline):
     extra = 1
 
 class FoodAdmin(admin.ModelAdmin):
+    search_fields = ['name']
     inlines = [MeasureInline]
 
 admin.site.register(Food, FoodAdmin)
