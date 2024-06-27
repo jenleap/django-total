@@ -1,0 +1,5 @@
+### Get all foods
+GET http://localhost:8000/api/foods/
+
+### Get single food
+GET http://localhost:8000/api/foods/1

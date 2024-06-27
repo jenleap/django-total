@@ -1,0 +1,5 @@
+### Get all recipes
+GET http://localhost:8000/api/recipes
+
+### Get a single recipe
+GET http://localhost:8000/api/recipes/1

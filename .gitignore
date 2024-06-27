@@ -7,3 +7,4 @@ total_be/core/migrations/__pycache__
 total_be/recipes/__pycache__
 total_be/recipes/migrations/__pycache__
 total_be/staticfiles
+total_be/media

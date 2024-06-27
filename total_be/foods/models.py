@@ -8,6 +8,9 @@ class Food(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def get_measure_by_unit(self, unit):
+        return self.measures.filter(unit=unit).first()
 
 class Measure(models.Model):
     UNITS_OF_MEASURE = {
@@ -29,5 +32,10 @@ class Measure(models.Model):
     protein = models.DecimalField(max_digits=6, decimal_places=2)
     fat = models.DecimalField(max_digits=6, decimal_places=2)
     fiber = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+
+    def unit_label(self):
+        if self.unit == "0":
+            return self.custom_unit
+        return self.UNITS_OF_MEASURE.get(self.unit, "Unknown unit")
 
 
