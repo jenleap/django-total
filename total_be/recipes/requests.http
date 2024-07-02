@@ -1,5 +1,11 @@
 ### Get all recipes
 GET http://localhost:8000/api/recipes
 
+### Search all recipes
+GET http://localhost:8000/api/recipes/?search=
+
+### Search by category
+GET http://localhost:8000/api/recipes/?category=
+
 ### Get a single recipe
 GET http://localhost:8000/api/recipes/1

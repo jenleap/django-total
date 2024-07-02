@@ -8,7 +8,11 @@ from .serializers import FoodSerializer
 
 @api_view(['GET'])
 def getFoods(request):
-    foods = Food.objects.all()
+    search_query = request.GET.get('search', None)
+    if search_query:
+        foods = Food.objects.filter(name__icontains=search_query)
+    else:
+        foods = Food.objects.all()
     serializedFoods = FoodSerializer(foods, many=True)
     return Response(serializedFoods.data)
 

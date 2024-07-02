@@ -15,7 +15,7 @@ class Recipe(models.Model):
     description = models.TextField()
     recipe_yield = models.IntegerField()
     serving_size = models.CharField(max_length=100)
-    categories = models.ManyToManyField(Category)
+    categories = models.ManyToManyField(Category, related_name='recipes')
     photo = models.ImageField(upload_to='recipe_photos/', null=True, blank=True)
 
     def __str__(self):
